@@ -1,0 +1,223 @@
+.TH dfc 1  "October 05, 2014" "version 3.0.5" "USER COMMANDS"
+.SH NAME
+dfc \- display file system space usage using graphs and colors
+.SH SYNOPSIS
+.B dfc [OPTION(S)] [\-c WHEN] [\-e FORMAT] [\-p FSNAME] [\-q SORTBY] [\-t FSTYPE] [\-u UNIT]
+.SH DESCRIPTION
+dfc(1) is a tool similar to df(1) except that it is able to show a graph along with the
+data and is able to use color (color mode is "color\-auto" by default but you
+can change this with "\-c" option).
+
+The available size corresponds to the space available from a user point of
+view and not from root's perspective (ie: use f_bavail instead of f_bfree).
+
+Without any argument, size is displayed in human\-readable format.
+Be aware that when using human\-readable format, there might be some rounding
+when computing the size. If you want maximum precision, use the "\-u"
+option and choose the unit.
+
+dfc(1) also has a built in feature that makes the output auto adjust based on
+terminal width. If you want to override this behavior, use the "\-f" option.
+
+.SH OPTIONS
+.TP
+\-a
+Show all (do not omit any file system).
+.TP
+\-b
+Do not show the graph bar.
+.TP
+\-c [WHEN]
+Choose color mode where WHEN is one of the following sub\-option:
+
+"always":
+Color will always be used, no matter what "stdout" is.
+
+"auto":
+This is default when "\-c" is not activated. Color is used only if "stdout"
+is a terminal. For instance, color will be disabled with this option if you
+pipe the output of dfc(1) into another command.
+
+"never":
+Color will never be used.
+
+.TP
+\-d
+Show used size.
+.TP
+\-e [FORMAT]
+Allows you to export dfc(1) output to specified FORMAT.
+FORMAT is one of the following:
+
+"csv":
+Output as "comma separated value" file type. Example usage:
+
+	dfc \-e csv > foo.csv
+
+"html":
+Output is HTML formated. Example usage:
+
+	dfc \-e html \-Tadiso \-c always > index.html
+
+"tex":
+Output is TeX formated. Example usage:
+
+	dfc \-e tex \-c always > report.tex
+
+"text":
+Text output (default).
+
+.TP
+\-f
+Override auto\-adjust behavior by forcing information to be displayed.
+This option can be useful when redirecting dfc(1) output.
+.TP
+\-h
+Show a short help text.
+.TP
+\-i
+Show information about inodes.
+.TP
+\-l
+Only show information about locally mount file systems.
+.TP
+\-m
+Use SI units (metric) (ie: size is computed using powers of 10 instead of powers
+of 2).
+.TP
+\-n
+Do not print header.
+.TP
+\-o
+Show mount options.
+.TP
+\-p [FSNAME]
+Allows you to perform filtering on file system name. FSNAME can be anything.
+For instance, if you want to see only file system which name starts with
+"/dev", you would use the following:
+
+	dfc \-p /dev
+
+This will output only file systems which names are, for instance,
+"/dev/sda1", "/dev/root", "/dev", etc.
+
+Multiple selection is supported. In this case, FSNAME needs to be a comma
+separated list (without spaces). For instance, if you want to filter "/dev"
+and "tmpfs", you would use the following:
+
+	dfc \-p /dev,tmpfs
+
+You can also use negative matching to filter the output. To do so, you just
+need to prepend a "\-" to FSNAME. In the following example, dfc(1) will display
+all file system name except those mentioned:
+
+	dfc \-p \-proc,/dev/sdc,run
+
+.TP
+\-q [SORTBY]
+Allows you to sort the output based on SORTBY.
+
+SORTBY can take one of those three values: "name", "type", "mount".
+
+When using "name", the output is sorted by file system name.
+When using "type", the output is sorted by file system type.
+When using "mount", the output is sorted by mount points.
+
+.TP
+\-s
+Sum the total usage.
+.TP
+\-t [FSTYPE]
+Allows you to perform filtering on file system type. FSTYPE could take any
+known file system value. For instance, "ext4", "ufs", "tmpfs", "reiserfs", etc.
+
+Multiple selection on file system is also possible. In this case, FSTYPE
+needs to be a comma separated list (without spaces). For instance, if you want to
+filter "ext4" and "tmpfs", you would use the following:
+
+	dfc \-t ext4,tmpfs
+
+You can also use negative matching to filter the output. To do so, you just
+need to prepend a "\-" to FSTYPE. In the following example, dfc(1) will
+display all file system type except those mentioned:
+
+	dfc \-t \-rootfs,tmpfs
+
+.TP
+\-T
+Show file system type.
+.TP
+\-u [UNIT]
+Show size using the unit specified. UNIT can take one of the following values:
+
+"h":
+	Human readable (default when not using "\-u" option).
+
+"b":
+	Show bytes.
+
+"k":
+	Show size using Kio.
+
+"m":
+	Show size using Mio.
+
+"g":
+	Show size using Gio.
+
+"t":
+	Show size using Tio.
+
+"p":
+	Show size using Pio.
+
+"e":
+	Show size using Eio.
+
+"z":
+	Show size using Zio.
+
+"y":
+	Show size using Yio.
+
+NOTE: When using "\-u" option along with "\-m" option, those suboptions are
+replaced by their SI counterparts.
+.TP
+\-v
+Print dfc(1) version and exit.
+.TP
+\-w
+Use a wider bar for the graph.
+.TP
+\-W
+Wide path name (avoid truncation of file name). May require a larger display.
+.SH CONFIGURATION FILE
+The configuration file is optional. It allows you to change dfc(1)
+default colors, values when colors change and graph symbol in text mode and
+modify colors used in html export.
+
+If you want to use it, place it here:
+
+	$XDG_CONFIG_HOME/dfc/dfcrc
+
+If your operating system does not support XDG Base Directory Specification, it
+should then be placed here:
+
+	$HOME/.config/dfc/dfcrc
+
+Or, last choice:
+
+	$HOME/.dfcrc
+
+NOTE: The last two choices can be chosen only if your OS does not support XDG
+Base Directory Specification.
+.SH BUGS
+If you find one, please contact the author and explain what you encounter.
+.SH AUTHORS
+Robin Hahling <robin.hahling\(atgw\-computing.net>
+.SH COPYRIGHT
+Copyright \(co 2012-2014 Robin Hahling
+.SH LICENSE
+BSD 3-clause
+.SH SEE ALSO
+df(1), du(1)

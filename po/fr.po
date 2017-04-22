@@ -1,0 +1,379 @@
+# French translations for dfc package.
+# Copyright (C) 2012-2014 THE dfc'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dfc package.
+# Robin Hahling <robin.hahling@gw-computing.net>, 2012-2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dfc 3.0.5\n"
+"Report-Msgid-Bugs-To: robin.hahling@gw-computing.net\n"
+"POT-Creation-Date: 2014-10-05 01:49+0200\n"
+"PO-Revision-Date: 2012-04-15 13:52+0200\n"
+"Last-Translator: Robin Hahling <robin.hahling@gw-computing.net>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/csv.c:95
+#, c-format
+msgid "FILESYSTEM,"
+msgstr "SYSTÈME DE FICHIERS,"
+
+#: src/csv.c:98
+#, c-format
+msgid "TYPE,"
+msgstr "TYPE,"
+
+#: src/csv.c:100
+#, c-format
+msgid "%%USED,"
+msgstr "%%UTILISÉ,"
+
+#: src/csv.c:103
+#, c-format
+msgid "USED,"
+msgstr "UTILISÉ,"
+
+#: src/csv.c:105
+#, c-format
+msgid "AVAILABLE,"
+msgstr "DISPONIBLE,"
+
+#: src/csv.c:107
+#, c-format
+msgid "TOTAL,"
+msgstr "TOTAL,"
+
+#: src/csv.c:110
+#, c-format
+msgid "#INODES,"
+msgstr "#INODES,"
+
+#: src/csv.c:111 src/html.c:168 src/tex.c:158
+#, c-format
+msgid "AV.INODES,"
+msgstr "INODES DISP.,"
+
+#: src/csv.c:114 src/html.c:171 src/tex.c:160
+msgid "MOUNTED ON"
+msgstr "MONTÉ SUR"
+
+#: src/csv.c:117
+#, c-format
+msgid ",MOUNT OPTIONS"
+msgstr ",OPTIONS DE MONTAGE"
+
+#: src/csv.c:144
+#, c-format
+msgid "SUM:,"
+msgstr "SOMME:,"
+
+#: src/dfc.c:203
+#, c-format
+msgid "-c: illegal sub option %s\n"
+msgstr "-c: sous-option illégale %s\n"
+
+#: src/dfc.c:236
+#, c-format
+msgid "-e: illegal sub option %s\n"
+msgstr "-e: sous-option illégale %s\n"
+
+#: src/dfc.c:284
+#, c-format
+msgid "-q: illegal sub option %s\n"
+msgstr "-q: sous-option illégale %s\n"
+
+#: src/dfc.c:344
+#, c-format
+msgid "-u: illegal sub option %s\n"
+msgstr "-u: sous-option illégale %s\n"
+
+#: src/dfc.c:386
+#, c-format
+msgid "Error reading the configuration file: %s\n"
+msgstr "Erreur pendant la lecture du fichier de configuration: %s\n"
+
+#: src/dfc.c:421
+msgid "Try dfc -h for more information\n"
+msgstr "Essayez dfc -h pour plus d'informations\n"
+
+#: src/dfc.c:424
+msgid ""
+"Usage:  dfc [OPTION(S)] [-c WHEN] [-e FORMAT] [-p FSNAME] [-q SORTBY] [-t "
+"FSTYPE]\n"
+"\t[-u UNIT]\n"
+"Available options:\n"
+"\t-a\tprint all mounted filesystem\n"
+"\t-b\tdo not show the graph bar\n"
+"\t-c\tchoose color mode. Read the manpage\n"
+"\t\tfor details\n"
+"\t-d\tshow used size\n"
+"\t-e\texport to specified format. Read the manpage\n"
+"\t\tfor details\n"
+"\t-f\tdisable auto-adjust mode (force display)\n"
+"\t-h\tprint this message\n"
+"\t-i\tinfo about inodes\n"
+"\t-l\tonly show information about locally mounted\n"
+"\t\tfile systems\n"
+msgstr ""
+"Utilisation: dfc [OPTION(S)] [-c WHEN] [-e FORMAT] [-p FSNAME]  [-q SORTBY] "
+"[-t FSTYPE]\n"
+"\t[-u UNIT]\n"
+"Options disponibles:\n"
+"\t-a\taffiche tous les systèmes de fichiers montés\n"
+"\t-b\tdésactive l'affichage du graphe\n"
+"\t-c\tpermet de choisir le mode pour la couleur. Lisez le manuel\n"
+"\t\tpour les détails\n"
+"\t-d\taffiche la taille de l'utilisation\n"
+"\t-e\texporte dans le format spécifié. Lisez le manuel\n"
+"\t\tpour les détails\n"
+"\t-f\tdésactive le mode d'auto-ajustement (force l'affichage)\n"
+"\t-h\taffiche ce message\n"
+"\t-i\tinformations sur les inodes\n"
+"\t-l\taffiche les informations sur les systèmes de fichiers montés\n"
+"\t\tlocalement uniquement\n"
+
+#: src/dfc.c:442
+msgid ""
+"\t-m\tuse metric (SI unit)\n"
+"\t-n\tdo not print header\n"
+"\t-o\tshow mount flags\n"
+"\t-p\tfilter by file system name. Read the manpage\n"
+"\t\tfor details\n"
+"\t-q\tsort the output. Read the manpage\n"
+"\t\tfor details\n"
+"\t-s\tsum the total usage\n"
+"\t-t\tfilter by file system type. Read the manpage\n"
+"\t\tfor details\n"
+"\t-T\tshow filesystem type\n"
+"\t-u\tchoose the unit in which\n"
+"\t\tto show the values. Read the manpage\n"
+"\t\tfor details\n"
+"\t-v\tprint program version\n"
+"\t-w\tuse a wider bar\n"
+"\t-W\twide filename (un truncate)\n"
+msgstr ""
+"\t-m\tutilise les unités métriques (unités SI)\n"
+"\t-n\tdésactive l'affichage du titre\n"
+"\t-o\taffiche les options de montage\n"
+"\t-p\tfiltre par nom de système de fichiers. Lisez le manuel\n"
+"\t\tpour les détails\n"
+"\t-q\ttrie l'affichage. Lisez le manuel\n"
+"\t\tpour les détails.\n"
+"\t-s\tsomme l'utilisation totale\n"
+"\t-t\tfiltre par type de système de fichiers. Lisez le manuel\n"
+"\t\tpour les détails\n"
+"\t-T\taffiche le type de système de fichiers\n"
+"\t-u\tpermet de choisir l'unité dans laquelle\n"
+"\t\tles valeurs sont affichées. Lisez le manuel\n"
+"\t\tpour les détails\n"
+"\t-v\taffiche la version du programme\n"
+"\t-w\tutilise une barre plus large\n"
+"\t-W\tlong nom de fichiers (dé-tronque)\n"
+
+#: src/dfc.c:508
+#, c-format
+msgid "WARNING: %s was skipped because it could not be stated"
+msgstr "AVERTISSEMENT: %s a été ignoré car il ne peut pas être lu"
+
+#: src/dfc.c:947
+#, c-format
+msgid "Could not retrieve mount flags for %s\n"
+msgstr "Impossible de récupérer les options de montage pour %s\n"
+
+#: src/dfc.c:983
+#, c-format
+msgid "Truncating mount options for %s\n"
+msgstr "Troncation des options de montage pour %s\n"
+
+#: src/dotfile.c:151
+#, c-format
+msgid "Error: no value for %s in configuration file\n"
+msgstr "Erreur: aucune valeur pour %s dans le fichier de configuration\n"
+
+#: src/dotfile.c:216 src/dotfile.c:236
+#, c-format
+msgid ""
+"Value conversion failed for graph_medium: %s. What were you expecting with "
+"such a thing anyway?\n"
+msgstr ""
+"La conversion de la valeur a échoué pour graph_medium: %s. Qu'espériez-vous "
+"de toute façon?\n"
+
+#: src/dotfile.c:221
+#, c-format
+msgid "Medium value cannot be set below 0: %s\n"
+msgstr "La valeur medianne ne peut pas être fixée en dessous de 0: %s\n"
+
+#: src/dotfile.c:224
+#, c-format
+msgid "Medium value cannot be set above 100: %s\n"
+msgstr "La valeur médianne ne peut pas être fixée en dessus de 100: %s\n"
+
+#: src/dotfile.c:241
+#, c-format
+msgid "High value cannot be set below 0: %s\n"
+msgstr "La valeur haute ne peut pas être fixée en dessous de 0: %s\n"
+
+#: src/dotfile.c:244
+#, c-format
+msgid "High value cannot be set above 100: %s\n"
+msgstr "La valeur haute ne peut pas être fixée en dessus de 100: %s\n"
+
+#: src/dotfile.c:254
+#, c-format
+msgid "Wrong symbol value: %s\n"
+msgstr "Symbole impossible: %s\n"
+
+#: src/dotfile.c:350
+#, c-format
+msgid "Error: unknown option in configuration file: %s\n"
+msgstr "Erreur: option inconnue dans le fichier de configuration: %s\n"
+
+#: src/dotfile.c:359
+#, c-format
+msgid "Unknown color value: %s\n"
+msgstr "Couleur inconnue: %s\n"
+
+#: src/dotfile.c:364
+#, c-format
+msgid "Not a valid HTML color: %s\n"
+msgstr "Couleur HTML invalide: %s\n"
+
+#: src/html.c:147
+msgid "Unknown date"
+msgstr "Date inconnue"
+
+#: src/html.c:150
+#, c-format
+msgid "Generated by %s-%s on %s"
+msgstr "Généré par %s-%s le %s"
+
+#: src/html.c:153 src/tex.c:146
+msgid "FILESYSTEM"
+msgstr "SYSTÈME DE FICHIERS"
+
+#: src/html.c:156 src/tex.c:148
+msgid "TYPE"
+msgstr "TYPE"
+
+#: src/html.c:160 src/text.c:126
+msgid "%USED"
+msgstr "%UTILISÉ"
+
+#: src/html.c:162 src/tex.c:153 src/text.c:135
+msgid "USED"
+msgstr " UT."
+
+#: src/html.c:163 src/tex.c:154 src/text.c:145
+msgid "AVAILABLE"
+msgstr "   DISPO."
+
+#: src/html.c:164 src/tex.c:155 src/text.c:155
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#: src/html.c:167
+msgid "#INODES"
+msgstr "#INODES"
+
+#: src/html.c:174 src/tex.c:162
+msgid "MOUNT OPTIONS"
+msgstr "OPTIONS DE MONTAGE"
+
+#: src/tex.c:150
+msgid "USAGE"
+msgstr "UTILISATION"
+
+#: src/tex.c:151
+msgid "\\%USED"
+msgstr "\\%UTILISÉ"
+
+#: src/tex.c:157
+msgid "\\#INODES"
+msgstr "\\#INODES"
+
+#: src/text.c:102
+msgid "FILESYSTEM "
+msgstr "SYS. FICH. "
+
+#: src/text.c:107
+msgid " TYPE"
+msgstr " TYPE"
+
+#: src/text.c:120
+msgid " (=) USED"
+msgstr " (=)  UT."
+
+#: src/text.c:123
+msgid "FREE (-) "
+msgstr "LIB. (-) "
+
+#: src/text.c:158
+msgid "   #INODES"
+msgstr "   #INODES"
+
+#: src/text.c:159
+msgid " AV.INODES"
+msgstr " INODES D."
+
+#: src/text.c:162
+msgid " MOUNTED ON "
+msgstr " MONTÉ SUR  "
+
+#: src/text.c:167
+msgid "MOUNT OPTIONS\n"
+msgstr " OPT. DE MONT.\n"
+
+#: src/text.c:198
+msgid "SUM:"
+msgstr "SOM:"
+
+#: src/util.c:644
+msgid ""
+"WARNING: TTY too narrow. Some options have been disabled to make dfc output "
+"fit (use -f to override).\n"
+msgstr ""
+"AVERTISSEMENT: le TTY est trop étroit. Certaines options ont été désactivées "
+"afin d'ajuster l'affichage (utilisez -f afin d'outrepasser).\n"
+
+#: src/util.c:697
+msgid "WARNING: Output still messed up. Enlarge your terminal if you can...\n"
+msgstr ""
+"AVERTISSEMENT: l'affichage est toujours perturbé. Agrandissez votre terminal "
+"si cela est possible...\n"
+
+#: src/util.c:840
+msgid "black"
+msgstr "noir"
+
+#: src/util.c:843
+msgid "red"
+msgstr "rouge"
+
+#: src/util.c:846
+msgid "green"
+msgstr "vert"
+
+#: src/util.c:849
+msgid "yellow"
+msgstr "jaune"
+
+#: src/util.c:852
+msgid "blue"
+msgstr "bleu"
+
+#: src/util.c:855
+msgid "magenta"
+msgstr "magenta"
+
+#: src/util.c:858
+msgid "cyan"
+msgstr "cyan"
+
+#: src/util.c:861
+msgid "white"
+msgstr "blanc"
