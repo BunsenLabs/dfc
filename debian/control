@@ -1,0 +1,17 @@
+Source: dfc
+Section: utils
+Priority: extra
+Maintainer: Khalid El Fathi <khalid@elfathi.fr>
+Build-Depends: debhelper (>= 9), cmake
+Standards-Version: 3.9.6
+Homepage: http://projects.gw-computing.net/projects/dfc
+Vcs-Git: git://anonscm.debian.org/collab-maint/dfc.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/dfc.git
+
+Package: dfc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: display file system usage using graph and colors
+ dfc displays file system space usage using graphs and colors. In some ways, it
+ is a modernized version of df as it is able to use colors, draw graphs and
+ export its output to different formats such as CSV or HTML.

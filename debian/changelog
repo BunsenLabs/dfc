@@ -1,0 +1,22 @@
+dfc (3.0.5-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release. (Closes: #734038, #670983)
+    + Add Build-Depends on cmake.
+    + Update debian/rules.
+    + Remove 10-man--dfc.1.patch.
+    + debian/rules: fix cleaning process.
+  * debian/control:
+    + Bump Standards-Version to 3.9.6 (no changes needed).
+    + Use canonical VCS fields.
+    + Update package description. (Closes: #689400)
+  * Update debian/copyright.
+  * Add debian/upstream/metadata (DEP-12).
+
+ -- Matteo Cypriani <mcy@lm7.fr>  Sun, 05 Oct 2014 09:50:41 -0400
+
+dfc (2.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #668905)
+
+ -- Khalid El Fathi <khalid@elfathi.fr>  Sun, 15 Apr 2012 18:00:43 +0200

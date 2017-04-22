@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	cp -v po/fr.po debian/fr.po.orig
+	dh_auto_configure -- -DXDG_CONFIG_DIR=/usr/share/doc/dfc/examples \
+	  -DSYSCONFDIR=/etc
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -v debian/dfc/usr/share/doc/dfc/LICENSE \
+	  debian/dfc/usr/share/doc/dfc/CHANGELOG
+
+override_dh_auto_clean:
+	dh_auto_clean
+	if [ -f debian/fr.po.orig ]; then mv -v debian/fr.po.orig po/fr.po; fi
+	rm -vf po/dfc.pot src/extern.h
